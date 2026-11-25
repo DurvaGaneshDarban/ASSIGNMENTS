@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+void swap(int *a, int *b) {
+    int temp = *a;
+    *a = *b;
+    *b = temp;
+}
+
+int main(void) {
+    int first, second;
+
+    printf("Enter the first number: ");
+    if (scanf("%d", &first) != 1) {
+        return 1;
+    }
+
+    printf("Enter the second number: ");
+    if (scanf("%d", &second) != 1) {
+        return 1;
+    }
+
+    printf("Before Swapping:\n");
+    printf("First number=%d, Second number=%d\n", first, second);
+
+    swap(&first, &second);
+
+    printf("After Swapping:\n");
+    printf("First number=%d, Second number=%d\n", first, second);
+
+    return 0;
+}
